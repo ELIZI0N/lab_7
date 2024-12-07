@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#00FFFFFF"
     android:backgroundTint="#00FFFFFF"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -15,6 +15,7 @@
         android:layout_height="316dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/img" />
@@ -61,35 +62,529 @@
         app:srcCompat="@drawable/play_button" />
 
     <ScrollView
-        android:layout_width="335dp"
-        android:layout_height="1037dp"
-        android:layout_marginTop="336dp"
+        android:id="@+id/scrollView4"
+        android:layout_width="373dp"
+        android:layout_height="494dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView2">
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="335dp"
+            android:layout_height="1037dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="19dp"
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/Name"
                 android:layout_width="335dp"
-                android:layout_height="40dp"
-                android:orientation="horizontal">
+                android:layout_height="54dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="335dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="210dp"
+                        android:layout_height="32dp"
+                        android:fontFamily="@font/cabin"
+                        android:text="Yangnyeom Chicken"
+                        android:textColor="#001E00"
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+                        app:lineHeight="32dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:srcCompat="@drawable/share" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="335dp"
+                    android:layout_height="0.6dp"
+                    android:layout_weight="0"
+                    android:background="#C9CDC9" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Chef"
+                android:layout_width="335dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="335dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/chef"
+                        android:layout_width="160dp"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            app:srcCompat="@drawable/ava" />
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="100dp"
+                                android:layout_height="21dp"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:foregroundTint="#00FFFFFF"
+                                android:text="Andrew Jun"
+                                android:textColor="#001E00"
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                app:lineHeight="20.8dp" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="92dp"
+                                android:layout_height="19dp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="\@andrewjun"
+                                android:textColor="#637663"
+                                android:textSize="14dp"
+                                app:lineHeight="18.2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:id="@+id/likes"
+                        android:layout_width="104dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/imageButton4"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            app:srcCompat="@drawable/heart" />
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="70dp"
+                            android:layout_height="25dp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="273 Likes"
+                            android:textColor="#052C05"
+                            android:textSize="14dp"
+                            app:lineHeight="25dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="335dp"
+                    android:layout_height="0.6dp"
+                    android:layout_weight="0"
+                    android:background="#C9CDC9" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Overview"
+                android:layout_width="335dp"
+                android:layout_height="881dp"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/tap_bar"
+                    android:layout_width="335dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/tap_bar_fon"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="91dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center"
+                        app:cardBackgroundColor="#86BF3E"
+                        app:cardCornerRadius="30dp"
+                        tools:cardBackgroundColor="#86BF3E">
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="67.55dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="Overview"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12dp"
+                            app:lineHeight="14.63dp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="103.41dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="6dp"
+                        app:cardCornerRadius="30dp">
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="77dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="Ingredients"
+                            android:textColor="#637663"
+                            android:textSize="12dp"
+                            app:lineHeight="14.63dp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="114.18dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginRight="3.21dp"
+                        app:cardCornerRadius="30dp" >
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="69dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="Directions"
+                            android:textColor="#637663"
+                            android:textSize="12dp"
+                            app:lineHeight="14.63dp" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="210dp"
-                    android:layout_height="32dp"
-                    android:layout_weight="1"
-                    android:text="Yangnyeom Chicken" />
+                    android:id="@+id/textView8"
+                    android:layout_width="335dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Yangnyeom is crispy fried chicken coated in sweet and spicy sauce. It's accompanied by pickled radishes, sliced scallions, and a side of rice. Cold beer or soft drinks are popular pairings. Enjoy!"
+                    android:textColor="#354D35"
+                    android:textSize="15dp"
+                    app:lineHeight="24dp" />
 
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                <LinearLayout
+                    android:id="@+id/btns"
+                    android:layout_width="335dp"
+                    android:layout_height="61dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
 
+                    <FrameLayout
+                        android:layout_width="104dp"
+                        android:layout_height="61dp"
+                        android:background="@drawable/btns_fon">
+
+                        <LinearLayout
+                            android:id="@+id/cook_time"
+                            android:layout_width="76dp"
+                            android:layout_height="45dp"
+                            android:orientation="vertical"
+                            tools:layout_marginLeft="12dp"
+                            tools:layout_marginTop="8dp">
+
+                            <LinearLayout
+                                android:id="@+id/time"
+                                android:layout_width="76dp"
+                                android:layout_height="21dp"
+                                android:layout_marginBottom="6dp"
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    app:srcCompat="@drawable/carbon_time" />
+
+                                <TextView
+                                    android:id="@+id/textView9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginHorizontal="6dp"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:text="12 mins"
+                                    android:textColor="#F85657"
+                                    android:textSize="14dp"
+                                    app:lineHeight="21dp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/textView10"
+                                android:layout_width="76dp"
+                                android:layout_height="18dp"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="Cook time"
+                                android:textColor="#354D35"
+                                android:textSize="12dp"
+                                app:lineHeight="18dp" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <FrameLayout
+                        android:layout_width="104dp"
+                        android:layout_height="61dp"
+                        android:background="@drawable/btns_fon">
+
+                        <LinearLayout
+                            android:id="@+id/serves"
+                            android:layout_width="84dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="8dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/serving"
+                                android:layout_width="84dp"
+                                android:layout_height="21dp"
+                                android:layout_marginBottom="6dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imageView5"
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    app:srcCompat="@drawable/calories" />
+
+                                <TextView
+                                    android:id="@+id/textView11"
+                                    android:layout_width="62dp"
+                                    android:layout_height="21dp"
+                                    android:layout_marginHorizontal="6dp"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:text="245"
+                                    android:textColor="#F85657"
+                                    android:textSize="14dp"
+                                    app:lineHeight="21dp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/textView12"
+                                android:layout_width="84dp"
+                                android:layout_height="18dp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center"
+                                android:text="Calories"
+                                android:textColor="#354D35"
+                                android:textSize="12dp"
+                                app:lineHeight="18dp" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <FrameLayout
+                        android:layout_width="104dp"
+                        android:layout_height="61dp"
+                        android:background="@drawable/btns_fon">
+
+                        <LinearLayout
+                            android:id="@+id/origin"
+                            android:layout_width="62dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="21dp"
+                            android:layout_marginTop="8dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/korea"
+                                android:layout_width="62dp"
+                                android:layout_height="21dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imageView6"
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    app:srcCompat="@drawable/carbon_location" />
+
+                                <TextView
+                                    android:id="@+id/textView13"
+                                    android:layout_width="42dp"
+                                    android:layout_height="21dp"
+                                    android:layout_marginHorizontal="6dp"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:text="Korea"
+                                    android:textColor="#F85657"
+                                    android:textSize="14dp"
+                                    app:lineHeight="21dp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/textView14"
+                                android:layout_width="62dp"
+                                android:layout_height="18dp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:gravity="center"
+                                android:text="Origin"
+                                android:textColor="#354D35"
+                                android:textSize="12dp"
+                                app:lineHeight="18dp" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Reviews"
+                    android:layout_width="335dp"
+                    android:layout_height="610dp"
+                    android:layout_marginTop="14dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/reviews"
+                        android:layout_width="335dp"
+                        android:layout_height="32dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView15"
+                            android:layout_width="124dp"
+                            android:layout_height="32dp"
+                            android:fontFamily="@font/cabin"
+                            android:text="Reviews (209)"
+                            android:textColor="#001E00"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            app:lineHeight="32dp" />
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton5"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:backgroundTint="#00FFFFFF"
+                            app:srcCompat="@drawable/arrow_left" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Reviewing"
+                        android:layout_width="315dp"
+                        android:layout_height="564dp"
+                        android:layout_marginTop="14dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/com/rate_img"
+                            android:layout_width="315dp"
+                            android:layout_height="236dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/imageView7"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ava2" />
+
+                            <FrameLayout
+                                android:layout_width="276dp"
+                                android:layout_height="236dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/textView16"
+                                    android:layout_width="63dp"
+                                    android:layout_height="12dp"
+                                    android:fontFamily="@font/montserrat_semibold"
+                                    android:text="Bellington"
+                                    android:textColor="#052C05"
+                                    android:textSize="12dp"
+                                    app:lineHeight="12dp" />
+
+                                <TextView
+                                    android:id="@+id/textView17"
+                                    android:layout_width="276dp"
+                                    android:layout_height="64dp"
+                                    android:layout_marginTop="16dp"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+                                    android:textColor="#052C05"
+                                    android:textSize="10dp"
+                                    app:lineHeight="16dp" />
+
+                                <ImageView
+                                    android:id="@+id/imageView8"
+                                    android:layout_width="271dp"
+                                    android:layout_height="116dp"
+                                    app:srcCompat="@drawable/img_1com" />
+
+                            </FrameLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
