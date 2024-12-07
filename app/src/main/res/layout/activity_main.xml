@@ -64,27 +64,30 @@
 
     <ScrollView
         android:id="@+id/scrollView4"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="19dp"
             android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/Name"
-                android:layout_width="335dp"
+                android:layout_width="match_parent"
                 android:layout_height="54dp"
+                android:layout_marginHorizontal="20dp"
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="335dp"
+
+                    android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:orientation="horizontal">
@@ -115,7 +118,7 @@
 
                 <View
                     android:id="@+id/view"
-                    android:layout_width="335dp"
+                    android:layout_width="match_parent"
                     android:layout_height="0.6dp"
                     android:layout_weight="0"
                     android:background="#59C9CDC9" />
@@ -123,13 +126,14 @@
 
             <LinearLayout
                 android:id="@+id/Chef"
-                android:layout_width="335dp"
+                android:layout_width="match_parent"
                 android:layout_height="64dp"
+                android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="14dp"
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="335dp"
+                    android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:orientation="horizontal">
@@ -218,7 +222,7 @@
 
                 <View
                     android:id="@+id/view2"
-                    android:layout_width="335dp"
+                    android:layout_width="match_parent"
                     android:layout_height="0.6dp"
                     android:layout_weight="0"
                     android:background="#59C9CDC9" />
@@ -227,14 +231,15 @@
 
             <LinearLayout
                 android:id="@+id/Overview"
-                android:layout_width="335dp"
+                android:layout_width="match_parent"
                 android:layout_height="331dp"
+                android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="14dp"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:id="@+id/tap_bar"
-                    android:layout_width="335dp"
+                    android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_gravity="clip_horizontal"
                     android:background="@drawable/tap_bar_fon"
@@ -243,11 +248,12 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="91dp"
                         android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
                         android:layout_marginLeft="5dp"
-                        android:layout_marginTop="6dp"
                         android:gravity="center"
                         app:cardBackgroundColor="#86BF3E"
                         app:cardCornerRadius="30dp"
+                        app:cardElevation="0dp"
                         tools:cardBackgroundColor="#86BF3E">
 
                         <TextView
@@ -300,7 +306,7 @@
 
                 <TextView
                     android:id="@+id/textView8"
-                    android:layout_width="335dp"
+                    android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_marginTop="12dp"
                     android:fontFamily="@font/montserrat_medium"
@@ -311,7 +317,7 @@
 
                 <LinearLayout
                     android:id="@+id/btns"
-                    android:layout_width="335dp"
+                    android:layout_width="match_parent"
                     android:layout_height="61dp"
                     android:layout_marginTop="12dp"
                     android:orientation="horizontal">
@@ -488,14 +494,14 @@
 
                 <LinearLayout
                     android:id="@+id/Reviews"
-                    android:layout_width="335dp"
+                    android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_marginTop="14dp"
                     android:orientation="vertical">
 
                     <LinearLayout
                         android:id="@+id/reviews"
-                        android:layout_width="335dp"
+                        android:layout_width="match_parent"
                         android:layout_height="32dp"
                         android:orientation="horizontal">
 
