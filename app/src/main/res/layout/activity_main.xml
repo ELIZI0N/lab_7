@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/imageButton14"
+            android:id="@+id/back_button"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:backgroundTint="#00FFFFFF"
@@ -43,7 +43,7 @@
             android:layout_weight="1" />
 
         <ImageButton
-            android:id="@+id/imageButton15"
+            android:id="@+id/full_screen"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:backgroundTint="#00FFFFFF"
@@ -51,7 +51,7 @@
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/imageButton16"
+        android:id="@+id/play_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="138dp"
@@ -72,7 +72,7 @@
 
         <LinearLayout
             android:layout_width="335dp"
-            android:layout_height="1037dp"
+            android:layout_height="477dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="19dp"
             android:orientation="vertical">
@@ -106,7 +106,7 @@
                         android:layout_weight="1" />
 
                     <ImageButton
-                        android:id="@+id/imageButton2"
+                        android:id="@+id/share_button"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         app:srcCompat="@drawable/share" />
@@ -192,7 +192,7 @@
                         android:orientation="horizontal">
 
                         <ImageButton
-                            android:id="@+id/imageButton4"
+                            android:id="@+id/like_button"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             app:srcCompat="@drawable/heart" />
@@ -294,7 +294,7 @@
                         android:layout_height="40dp"
                         android:layout_marginTop="6dp"
                         android:layout_marginRight="3.21dp"
-                        app:cardCornerRadius="30dp" >
+                        app:cardCornerRadius="30dp">
 
                         <TextView
                             android:id="@+id/textView7"
@@ -494,7 +494,7 @@
                 <LinearLayout
                     android:id="@+id/Reviews"
                     android:layout_width="335dp"
-                    android:layout_height="610dp"
+                    android:layout_height="60dp"
                     android:layout_marginTop="14dp"
                     android:orientation="vertical">
 
@@ -521,7 +521,7 @@
                             android:layout_weight="1" />
 
                         <ImageButton
-                            android:id="@+id/imageButton5"
+                            android:id="@+id/open_reviews"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:backgroundTint="#00FFFFFF"
