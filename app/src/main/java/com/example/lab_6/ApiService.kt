@@ -4,6 +4,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface RetrofitRecepts {
-    @GET("lookup.php")
-    suspend fun getEvents(@Query("i") id: String): MealList
+    @GET("random.php")
+    suspend fun getEvents(): MealList
 }

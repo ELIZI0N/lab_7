@@ -9,8 +9,10 @@ import com.bumptech.glide.Glide
 import com.example.lab_6.databinding.ActivityMainBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import kotlin.time.Duration.Companion.seconds
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                val response = Retrofit.api.getEvents(id = "52772")
+                val response = Retrofit.api.getEvents()
                 val meals = response.meals
 
                 if (meals.isNotEmpty()) {
