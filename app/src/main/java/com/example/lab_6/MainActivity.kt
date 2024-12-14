@@ -1,43 +1,83 @@
 package com.example.lab_6
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import android.widget.ImageButton
 import android.util.Log
+import android.widget.ImageButton
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
+import com.example.lab_6.databinding.ActivityMainBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val back: ImageButton = findViewById(R.id.back_button)
-        val full_scr: ImageButton = findViewById(R.id.full_screen)
-        val play: ImageButton = findViewById(R.id.play_button)
-        val share: ImageButton = findViewById(R.id.share_button)
-        val like: ImageButton = findViewById(R.id.like_button)
-        val review: ImageButton = findViewById(R.id.open_reviews)
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                val response = Retrofit.api.getEvents(id = "52772")
+                val meals = response.meals
 
-        back.setOnClickListener{
+                if (meals.isNotEmpty()) {
+                    val meal = meals[0]
+                    withContext(Dispatchers.Main) {
+                        binding.strMeal.text = meal.strMeal
+                        binding.strArea.text = meal.strArea
+                        binding.strInstructions.text = meal.strInstructions
+
+                        Glide.with(this@MainActivity)
+                            .load(meal.strMealThumb)
+                            .into(binding.strMealThumb)
+                    }
+                } else {
+                    withContext(Dispatchers.Main) {
+                        Toast.makeText(this@MainActivity, "Список событий пуст", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            } catch (e: Exception) {
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@MainActivity, "Ошибка загрузки данных: ${e.message}", Toast.LENGTH_SHORT).show()
+                }
+                Log.e("API_ERROR", e.message.orEmpty())
+            }
+        }
+
+        val back: ImageButton = binding.backButton
+        val fullScr: ImageButton = binding.fullScreen
+        val play: ImageButton = binding.playButton
+        val share: ImageButton = binding.shareButton
+        val like: ImageButton = binding.likeButton
+        val review: ImageButton = binding.openReviews
+
+        back.setOnClickListener {
             Log.i("Tap", "Кнопка должна возвращать на главный экран")
         }
 
-        full_scr.setOnClickListener{
+        fullScr.setOnClickListener {
             Log.i("Tap", "Кнопка должна открыть видео в полноэкранном режиме")
         }
 
-        play.setOnClickListener{
+        play.setOnClickListener {
             Log.i("Tap", "Кнопка должна возобновить видеоплеер")
         }
 
-        share.setOnClickListener{
+        share.setOnClickListener {
             Log.i("Tap", "Кнопка должна вызывать меню, чтобы поделиться ссылкой")
         }
 
-        like.setOnClickListener{
+        like.setOnClickListener {
             Log.i("Tap", "Кнопка должна увеличивать/уменьшать количество лайков")
         }
 
-        review.setOnClickListener{
+        review.setOnClickListener {
             Log.i("Tap", "Кнопка должна открывать все комментарии")
         }
     }

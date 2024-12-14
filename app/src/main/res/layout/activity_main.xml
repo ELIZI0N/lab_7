@@ -11,15 +11,14 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/strMealThumb"
         android:layout_width="wrap_content"
         android:layout_height="312dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout4"
@@ -57,9 +56,9 @@
         android:layout_height="40dp"
         android:layout_marginTop="138dp"
         android:backgroundTint="#00FFFFFF"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/strMealThumb"
+        app:layout_constraintStart_toStartOf="@+id/strMealThumb"
+        app:layout_constraintTop_toTopOf="@+id/strMealThumb"
         app:srcCompat="@drawable/play_button" />
 
     <ScrollView
@@ -69,7 +68,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/strMealThumb"
         app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
@@ -93,15 +92,15 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textView"
+                        android:id="@+id/strMeal"
                         android:layout_width="210dp"
                         android:layout_height="32dp"
                         android:fontFamily="@font/cabin"
-                        android:text="Yangnyeom Chicken"
                         android:textColor="#001E00"
                         android:textSize="24dp"
                         android:textStyle="bold"
-                        app:lineHeight="32dp" />
+                        app:lineHeight="32dp"
+                        android:text="Название блюда" />/>
 
                     <Space
                         android:layout_width="wrap_content"
@@ -305,12 +304,12 @@
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/strInstructions"
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:fontFamily="@font/montserrat_medium"
-                    android:text="Yangnyeom is crispy fried chicken coated in sweet and spicy sauce. It's accompanied by pickled radishes, sliced scallions, and a side of rice. Cold beer or soft drinks are popular pairings. Enjoy!"
+                    android:text="Описание блюда"
                     android:textColor="#354D35"
                     android:textSize="15dp"
                     app:lineHeight="24dp" />
@@ -387,7 +386,7 @@
                         android:background="@drawable/btns_fon">
 
                         <LinearLayout
-                            android:id="@+id/cook_time"
+                            android:id="@+id/serves"
                             android:layout_width="84dp"
                             android:layout_height="45dp"
                             android:layout_marginLeft="10dp"
@@ -466,16 +465,16 @@
                                     app:srcCompat="@drawable/carbon_location" />
 
                                 <TextView
-                                    android:id="@+id/textView13"
+                                    android:id="@+id/strArea"
                                     android:layout_width="42dp"
                                     android:layout_height="21dp"
                                     android:layout_marginLeft="6dp"
                                     android:layout_marginBottom="6dp"
                                     android:fontFamily="@font/montserrat_medium"
-                                    android:text="Korea"
                                     android:textColor="#F85657"
                                     android:textSize="14dp"
-                                    app:lineHeight="21dp" />
+                                    app:lineHeight="21dp"
+                                    android:text="Страна" />
                             </LinearLayout>
 
                             <TextView
